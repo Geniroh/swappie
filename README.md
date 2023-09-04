@@ -38,5 +38,5 @@ The API requires certain configuration settings. Create a `.env` file in the roo
 ## API Endpoints
 The backend API exposes the following endpoints
 
-[![Run in Postman](https://run.pstmn.io/button.svg)](https://api.postman.com/collections/15738942-6f30c19d-dc87-4a34-a7d4-0231c50f7f19?)
+[![Check Documentation](https://run.pstmn.io/button.svg)](https://documenter.getpostman.com/view/15738942/2s9Y5eNKkK)
 
