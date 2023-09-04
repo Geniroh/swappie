@@ -19,5 +19,8 @@
   "devDependencies": {
     "nodemon": "^3.0.1"
   },
-  "type": "module"
+  "type": "module",
+  "engines": {
+    "node": ">=14.20.1"
+  }
 }
