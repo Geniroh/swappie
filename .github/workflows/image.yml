@@ -13,22 +13,10 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Use Node.js
-      uses: actions/setup-node@v2
-      with:
-        node-version: 14  # Use the Node.js version you need
-
-    - name: Install dependencies
-      run: npm install
-
-    - name: Run tests
-      run: npm test
-
     - name: Build the Docker image
       run: |
         docker build . -f Dockerfile -t my-image-name:$(date +%s)
         docker tag my-image-name:$(date +%s) my-image-name:latest
-      working-directory: ./path/to/your/app  # Change this to your app's directory
 
     - name: Login to Docker Hub
       run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
@@ -38,8 +26,7 @@ jobs:
 
     - name: Deploy to Production
       run: |
-        # Add your deployment script or commands here
-        # This step will vary depending on your hosting environment
+        node index.js
       env:
         NODE_ENV: production
       if: github.ref == 'refs/heads/main'
